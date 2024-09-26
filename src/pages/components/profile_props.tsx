@@ -1,6 +1,12 @@
 import { AvatarProps } from "@/types/avatar";
 
+//there will always only be one props. props is ONE object
+//the type of AvatarProps has to match with the input props
 function Avatar({person, size=100}: AvatarProps) {
+
+  //or like function Avatar(props: AvatarProps){
+  // const {person, size=100}}
+  // functions defined with long list of parameters are hard to read. this is code smell
   return (
     <img
       className="avatar"
@@ -11,7 +17,6 @@ function Avatar({person, size=100}: AvatarProps) {
     />
   );
 }
-
 export default function Profile() {
   return (
     <div>
